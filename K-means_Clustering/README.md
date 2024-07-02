@@ -25,7 +25,7 @@ The heatmap shows some expected correlations, such as:
 
 There is also a strong correlation between *total_fer* (i.e. the number of children born to each woman with the current age-fertility rates) and child mortality. A high child mortality is accompanied by a greater number of births for these mothers, indicating the sad reality of needing to have more children, in the hope that some of them reach adulthood.
 
-[Heatmap](images/heatmap.png)
+![Heatmap](images/heatmap.png)
 
 ### Child mortality
 When plotting independant features against Child mortality, the following plots seem to show a strong correlation: 
@@ -39,7 +39,7 @@ When plotting independant features against Child mortality, the following plots 
 
 *Note: "Life expectation vs Child mortality" also shows a strong correlation, but it is probably not worth investigating as it is merely stating the obvious: high child mortality is correlated with low lifespan expectation. *
 
-[images/plot_child_mort.png](images/plot_child_mort.png) 
+![Plots Child mortality](images/plot_child_mort.png) 
 
 ### GDPP
 When plotting independant features against GDPP, the following plots seem to show a strong correlation: 
@@ -51,13 +51,13 @@ When plotting independant features against GDPP, the following plots seem to sho
 
 * Health vs GDPP
 
-[images/plot_gdpp.png](images/plot_gdpp.png) 
+![Plots GDPP](images/plot_gdpp.png) 
 
 ## K-means clustering
 
 After normalising the data, I used the elbow and silhouette score method in order to find the optimal number of clusters, which appears to be 3. 
 
-[images/elbow_silhouette.png](images/elbow_silhouette.png)
+![Elbow and Silhouette scores](images/elbow_silhouette.png)
 
 ## Visualisation of clusters
 
@@ -78,7 +78,7 @@ Since we have access to the average income per capita in the dataset, I used thi
 
 ### Child mortality vs GDPP
 
-[images/gdpp_n_child_mort.png](images/gdpp_n_child_mort.png) 
+![Child mortality vs GDPP](images/gdpp_n_child_mort.png) 
 
 This plot shows a strong correlation between Child mortality and GDPP. The higher the GDPP, the less Child mortality per country. As we have already seen, the same trends apply to Income levels. 
 
@@ -90,7 +90,7 @@ Most countries on a high income are spread on a broader GDPP range (£20k to £5
 
 ### Inflation vs GDPP
 
-[images/gdpp_n_inflation.png](images/gdpp_n_inflation.png) 
+![Inflation vs GDPP](images/gdpp_n_inflation.png) 
 
 This plot shows that countries with a low GDPP (GDP per capita) are more prone to experience higher inflation rates, but GDPP appears to be only one factor among many others, not the main factor explaining inflation rated. We see for example that a significant number of high income countries (around the £40k-mark) experience a similar level of inflation as countries with low and medium income levels.  
 
