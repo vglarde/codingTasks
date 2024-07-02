@@ -12,7 +12,7 @@ The data used in this task was originally sourced from Help.NGO. This internatio
 
 The dataset attributes include factors such as child mortality, life Expectation, health, number of children per woman in age of procreating, net income and GDP per capita, inflation rates, importations and exportations. 
 
-### Preprocessing and Feature Selection
+## Preprocessing and Feature Selection
 
 Using a heatmap and pairplots, we can have an idea of which features look promising for separating into clusters. 
 
@@ -25,9 +25,9 @@ The heatmap shows some expected correlations, such as:
 
 There is also a strong correlation between *total_fer* (i.e. the number of children born to each woman with the current age-fertility rates) and child mortality. A high child mortality is accompanied by a greater number of births for these mothers, indicating the sad reality of needing to have more children, in the hope that some of them reach adulthood.
 
-[Heatmap](https://github.com/vglarde/codingTasks/blob/master/K-means_Clustering/images/heatmap.png)
+[Heatmap](images/heatmap.png)
 
-**Child mortality**
+### Child mortality
 When plotting independant features against Child mortality, the following plots seem to show a strong correlation: 
 * GDPP vs Child mortality
 
@@ -41,7 +41,7 @@ When plotting independant features against Child mortality, the following plots 
 
 [images/plot_child_mort.png](images/plot_child_mort.png) 
 
-**GDPP**
+### GDPP
 When plotting independant features against GDPP, the following plots seem to show a strong correlation: 
 * Child mortality vs GDPP  
   *This plot shows that high Child mortality is correlated with low GDPP*
@@ -53,13 +53,13 @@ When plotting independant features against GDPP, the following plots seem to sho
 
 [images/plot_gdpp.png](images/plot_gdpp.png) 
 
-### K-means clustering
+## K-means clustering
 
-After normalising the data, I used the elbow and silhouette score method in order to find the optimal number of clusters, which appears to be 3. 
+After normalising the data, I used the elbow and silhouette score method in order to find the optimal number of clusters, which appears to be 3. 
 
 [images/elbow_silhouette.png](images/elbow_silhouette.png)
 
-### Visualisation of clusters
+## Visualisation of clusters
 
 The task instructions asked to label the groups of countries based on child mortality, GDPP and inflation. The following [following terms](https://en.wikipedia.org/wiki/Developing_country#Terms_used_to_classify_countries) may be used: "least developed, developing and developed", or "low, low-middle, upper-middle and high income". Alternatively, we could simply rank them from highest to lowest.
 
@@ -76,7 +76,7 @@ Since we have access to the average income per capita in the dataset, I used thi
 | Medium income | 87 countries | 12,644 | 12,500| middle income |
 | High income | 35 countries | 45,800 | 40,400| high-middle to high income |
 
-**Child mortality vs GDPP**
+### Child mortality vs GDPP
 
 [images/gdpp_n_child_mort.png](images/gdpp_n_child_mort.png) 
 
@@ -88,7 +88,7 @@ Countries on a medium income are more disparate, although still concentrated in 
 
 Most countries on a high income are spread on a broader GDPP range (£20k to £55k), with only four countries over £60k. All these countries experience a low Child mortality.
 
-**Inflation vs GDPP**
+### Inflation vs GDPP
 
 [images/gdpp_n_inflation.png](images/gdpp_n_inflation.png) 
 
