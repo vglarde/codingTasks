@@ -4,7 +4,19 @@ HyperionDev - Data Science Skills Bootcamp (Task 23)
 
 The objective of this task was to  group countries using socio-economic and health factors to determine the development status of the country.
 
-### Data Source
+## Table of contents
+
+1. [Data Source](#data-source)
+2. [Preprocessing and Feature Selection](#preprocessing)
+    1. [Child mortality](#preprocessing-1)
+    2. [GDPP](#preprocessing-2)
+3. [K-means clustering](#k-means-clustering)
+4. [Visualisation of clusters](#visualisation-clusters)
+    1. [Child mortality vs GDPP](#visualisation-clusters-1)
+    2. [Inflation vs GDPP](#visualisation-clusters-2)
+5. [Conclusion](#conclusion)
+
+## 1. Data Source <a name="data-source"></a>
 
 Provided dataset: "Country-data.csv"
 
@@ -12,7 +24,7 @@ The data used in this task was originally sourced from Help.NGO. This internatio
 
 The dataset attributes include factors such as child mortality, life Expectation, health, number of children per woman in age of procreating, net income and GDP per capita, inflation rates, importations and exportations. 
 
-## Preprocessing and Feature Selection
+## 2. Preprocessing and Feature Selection <a name="preprocessing"></a>
 
 Using a heatmap and pairplots, we can have an idea of which features look promising for separating into clusters. 
 
@@ -27,7 +39,7 @@ There is also a strong correlation between *total_fer* (i.e. the number of child
 
 ![Heatmap](images/heatmap.png)
 
-### Child mortality
+### 2.1 Child mortality <a name="preprocessing-1"></a>
 When plotting independant features against Child mortality, the following plots seem to show a strong correlation: 
 * GDPP vs Child mortality
 
@@ -41,7 +53,7 @@ When plotting independant features against Child mortality, the following plots 
 
 ![Plots Child mortality](images/plot_child_mort.png) 
 
-### GDPP
+### 2.2 GDPP <a name="preprocessing-2"></a>
 When plotting independant features against GDPP, the following plots seem to show a strong correlation: 
 * Child mortality vs GDPP  
   *This plot shows that high Child mortality is correlated with low GDPP*
@@ -53,13 +65,13 @@ When plotting independant features against GDPP, the following plots seem to sho
 
 ![Plots GDPP](images/plot_gdpp.png) 
 
-## K-means clustering
+## 3. K-means clustering <a name="k-means-clustering"></a>
 
 After normalising the data, I used the elbow and silhouette score method in order to find the optimal number of clusters, which appears to be 3. 
 
 ![Elbow and Silhouette scores](images/elbow_silhouette.png)
 
-## Visualisation of clusters
+## 4. Visualisation of clusters <a name="visualisation-clusters"></a>
 
 The task instructions asked to label the groups of countries based on child mortality, GDPP and inflation. The following [following terms](https://en.wikipedia.org/wiki/Developing_country#Terms_used_to_classify_countries) may be used: "least developed, developing and developed", or "low, low-middle, upper-middle and high income". Alternatively, we could simply rank them from highest to lowest.
 
@@ -76,7 +88,7 @@ Since we have access to the average income per capita in the dataset, I used thi
 | Medium income | 87 countries | 12,644 | 12,500| middle income |
 | High income | 35 countries | 45,800 | 40,400| high-middle to high income |
 
-### Child mortality vs GDPP
+### 4.1 Child mortality vs GDPP <a name="visualisation-clusters-1"></a>
 
 ![Child mortality vs GDPP](images/gdpp_n_child_mort.png) 
 
@@ -88,7 +100,7 @@ Countries on a medium income are more disparate, although still concentrated in 
 
 Most countries on a high income are spread on a broader GDPP range (£20k to £55k), with only four countries over £60k. All these countries experience a low Child mortality.
 
-### Inflation vs GDPP
+### 4.2 Inflation vs GDPP <a name="visualisation-clusters-2"></a>
 
 ![Inflation vs GDPP](images/gdpp_n_inflation.png) 
 
@@ -102,7 +114,7 @@ For example:
 * Global oil markets (Timor-Leste, Saudia Arabia, Brunei…)
 * Civil wars (Sudan, Nigeria, Yemen…)
 
-## Conclusion
+## 5. Conclusion <a name="conclusion"></a>
 
 As shown on the pairplot below, our model (dividing the countries into three groups, which we have roughly classified as low, medium, and high income) allows us to visualise strong socio-economic trends when the features are plotted against factors on a personal/individual level, such as child mortality, life expectancy, number of children per mother, individual income, and GDPP.
 
