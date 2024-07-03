@@ -15,7 +15,15 @@ The goals of this task were:
 The dataset provided for this task contains a list of passengers on the Titanic. 
 
 
-## Data preprocessing
+## Table of contents
+
+1. [Data preprocessing](#data-preprocessing)
+2. [Select and split the data](#select-split-data)
+3. [Decision Tree](#decision-tree)
+4. [Random Forests](#random-forests)
+5. [Accuracy scores](#accuracy-scores) 
+
+## 1. Data preprocessing <a name="data-preprocessing"></a>
 
 **Missing values** for Age and Port of Embarkation will be filled.  
 
@@ -23,7 +31,7 @@ The dataset provided for this task contains a list of passengers on the Titanic.
 
 **Categorical values** (Gender and Port of Embarkation) will be one-hot encoded.
 
-## Select and split the data
+## 2. Select and split the data <a name="select-split-data"></a>
 
 The following variables will be assigned to "x": 
 * Pclass = Passenger Class
@@ -38,7 +46,7 @@ Data will be split between Training (_train), Development (_dev), and Test (_tes
 * Data will initially be split between Training (80%) and Test (20%) sets. 
 * Then the Training data will be further split between Training (75%) and Development (25%) sets. 
 
-## Decision Tree
+## 3. Decision Tree <a name="decision-tree"></a>
 
 ![Decision Tree](images/decision_tree.png)
 
@@ -50,7 +58,7 @@ The final model shows an 83% accuracy for the Test set, which is well whithin ac
 
 The close results for the accuracy of the Test set (83%) and the Training set (84%) also show that the final model does not seem to be affected by overfitting.
 
-## Random Forests
+## 4. Random Forests <a name="random-forests"></a>
 
 Following the task instructions, I started by creating a *Bagged*, *Random Forest*, and *Boosted Tree*.
 
@@ -66,7 +74,7 @@ The last step was to generate accuracy scores for each model with the following 
 
 We see from the Random Forest model that "Age" is the feature contributing the most to predict the passenger survival, followed closely by "Fare" (passengers travelling in the most expensive cabins/suites on the Titanic).
 
-### Accuracy scores
+### 5. Accuracy scores <a name="accuracy-scores"></a>
 
 The best performing model is Bagging, with an accuracy score of 81.56%.
 
