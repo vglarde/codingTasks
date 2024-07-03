@@ -74,7 +74,7 @@ The last step was to generate accuracy scores for each model with the following 
 
 We see from the Random Forest model that "Age" is the feature contributing the most to predict the passenger survival, followed closely by "Fare" (passengers travelling in the most expensive cabins/suites on the Titanic).
 
-### 5. Accuracy scores <a name="accuracy-scores"></a>
+## 5. Accuracy scores <a name="accuracy-scores"></a>
 
 The best performing model is Bagging, with an accuracy score of 81.56%.
 
